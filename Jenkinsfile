@@ -35,7 +35,7 @@ pipeline {
 	when {
 		branch 'development'
 	}
-    }
+    } 
       steps {
         echo 'Succesful'
       }
@@ -43,10 +43,9 @@ pipeline {
         when {
                 branch 'production'
         }
+     }
       steps {
         echo 'Succesful'
       }
     }
   }
- }
-}
