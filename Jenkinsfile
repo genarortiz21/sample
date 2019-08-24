@@ -35,17 +35,17 @@ pipeline {
 	when {
 		branch 'development'
 	}
-    }
       steps {
         echo 'Succesful'
       }
+    }
     stage('Deploy to production') {
         when {
                 branch 'production'
         }
-   }
       steps {
         echo 'Succesful'
       }
     }
+   }
   }
