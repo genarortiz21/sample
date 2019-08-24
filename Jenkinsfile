@@ -35,6 +35,7 @@ pipeline {
 	when {
 		branch 'development'
 	}
+    }
       steps {
         echo 'Succesful'
       }
