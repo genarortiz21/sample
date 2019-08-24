@@ -24,11 +24,24 @@ pipeline {
       }
     }
     stage('Approve') {
+	when {
+		branch 'production'
+	}
       steps {
         input(message: 'Approve?', submitter: 'dev2')
       }
     }
-    stage('Deploy') {
+    stage('Deploy to development') {
+	when {
+		branch 'development'
+	}
+      steps {
+        echo 'Succesful'
+      }
+    stage('Deploy to production') {
+        when {
+                branch 'production'
+        }
       steps {
         echo 'Succesful'
       }
